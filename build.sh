@@ -36,6 +36,6 @@ fi
 set -e
 #bitbake core-image-aesd
 #bitbake -c cleanall aesd-assignments
-bitbake -c devshell aesd-assignments
+#bitbake -c devshell aesd-assignments
 #bitbake -c compile aesd-assignments
-#bitbake -v aesd-assignments 2>&1 | tee build.log
+bitbake -v aesd-assignments 2>&1 | tee build.log
