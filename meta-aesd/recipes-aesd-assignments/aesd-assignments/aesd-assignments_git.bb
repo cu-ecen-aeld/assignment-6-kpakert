@@ -25,7 +25,7 @@ inherit update-rc.d
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME:${PN} = "aesdsocket-start-stop"
 
-TARGET_LDFLAGS += "-pthread"
+TARGET_LDFLAGS += "-pthread -lrt"
 
 do_configure () {
 	:
