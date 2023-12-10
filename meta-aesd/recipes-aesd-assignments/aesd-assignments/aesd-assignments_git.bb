@@ -21,6 +21,11 @@ S = "${WORKDIR}/git/server"
 FILES:${PN} += "${bindir}/aesdsocket"
 FILES:${PN} += "${bindir}/aesdsocket-start-stop.sh"
 
+INITSCRIPT_PACKAGES = "${PN}"
+INITSCRIPT_NAME_${PN} = "aesdsocket-start-stop.sh"
+
+inherit update-rc.d
+
 TARGET_LDFLAGS += "-pthread"
 
 do_configure () {
